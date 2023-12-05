@@ -1,0 +1,25 @@
+{
+  
+  "Home": {
+    "Navbar": {
+        "home": "Home",
+        "appointment": "Appointment",
+        "blog": "Blog",
+        "search": "search",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "Banner": {
+        "first" :{
+          "title": "Do you have any question?",
+          "subtitle": "Ask our chatbot.",
+          "btn": "Chat Now"
+        },
+        "second" :{
+          "title": "Do you have any question?",
+          "subtitle": "Ask our chatbot.",
+          "btn": "Appointment Now"
+        }
+    }
+ }
+}
