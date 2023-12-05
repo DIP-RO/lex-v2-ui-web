@@ -9,7 +9,7 @@ const Carusel = () => {
     return (
         <div className="carousel w-full sm:hidden ">
             <div id="slide1" className="carousel-item relative w-full">
-                <div className=" w-full  bg-[#1d344a] flex ">
+                <div className=" w-full   flex ">
                     <div className="w-1/2 justify-center items-center">
                        <div className="justify-center mt-16">
                        <h1 className="text-center text-4xl font-['Open_Sans'] font-bold text-white mt-10 ">{t("Home.Banner.first.title")}</h1>
@@ -28,7 +28,7 @@ const Carusel = () => {
                 <Modal></Modal>
             </div>
             <div id="slide2" className="carousel-item relative w-full">
-            <div className=" w-full h-96 bg-[#1d344a] flex ">
+            <div className=" w-full h-96  flex ">
                     <div className="w-1/2 justify-center items-center">
                        <div className="justify-center mt-16">
                        <h1 className="text-center text-4xl font-['Open_Sans'] font-bold text-white mt-10 ">{t("Home.Banner.second.title")}</h1>
