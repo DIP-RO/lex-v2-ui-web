@@ -53,15 +53,15 @@ const OurTeam = () => {
 
 
     return (
-        <div className="flex justify-center items-center flex-col my-10">
-            <h1 className="text-white text-3xl font-bold border-solid border-4 p-3 rounded-2xl">Meet Our Team</h1>
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+        <div className="flex justify-center bg-[#f5f1f1] items-center flex-col my-10">
+            <h1 className="text-black bg-[#f5f1f1] text-3xl font-bold border-solid border-4 p-3 rounded-2xl">Meet Our Team</h1>
+            <div className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
                 {ourteam.map((team) => (
                     <div className="card" key={team.id}>
                         <figure className="px-10 pt-10">
                             <img src={team.image} alt={team.name} className="rounded-full w-28 h-28" />
                         </figure>
-                        <div className="card-body items-center justify-center text-center bg-[#1d344a] h-20 mt-5 rounded-2xl">
+                        <div className="card-body items-center justify-center text-center bg-[#212222] h-20 mt-5 rounded-2xl">
                             <h2 className="card-title text-white">{team.name}</h2>
                             <p className="text-white">{team.role}</p>
                         </div>

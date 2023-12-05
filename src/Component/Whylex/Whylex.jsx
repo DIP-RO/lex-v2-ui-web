@@ -16,12 +16,12 @@ function MyComponent() {
     const dataToDisplay = i18n.language === 'en' ? dataEng : dataBn;
 
     return (
-        <div className="hero   sm:hidden">
+        <div className="bg-[#f2e9e9] hero   sm:hidden">
             <div className="hero-content flex-col md:flex-row lg:flex-row-reverse">
                 <img src="https://i.ibb.co/XLqBYkL/image.png" className="max-w-lg rounded-lg  shadow-2xl w-1/2" />
                 <div className="w-1/2">
                     <h1 className="text-5xl font-bold text-white">{dataToDisplay.title}</h1>
-                    <p className="py-6 pr-10 text-white">{dataToDisplay.content}</p>
+                    <p className="py-6 pr-10 text-black">{dataToDisplay.content}</p>
 
                 </div>
             </div>

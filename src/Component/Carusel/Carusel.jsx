@@ -1,56 +1,173 @@
+import { useRef } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "./styles.css";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
-import Modal from "../Modal/Modal";
-import { useTranslation } from 'react-i18next'
 
 const Carusel = () => {
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
+    
+  return (
+    <div>
+      <>
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          onAutoplayTimeLeft={onAutoplayTimeLeft}
+          className="mySwiper"
+        >
+         <SwiperSlide style={{ backgroundImage: `url('https://i.ibb.co/8zmFRc9/360-F-628355502-xbtygoyym2-BKd-QHOZyip-XX03ej-Nekfk-V.jpg')` }}>
+          
+            <div className="justify-items-center my-20 mb-10 px-10 md:px-20 flex flex-row-reverse  ">
+              <div
+                className="w-1/2"
+                data-aos-duration="10000"
+                data-aos="zoom-in-down"
+              >
+                <img
+                  className="w-full h-full"
+                  src="https://i.ibb.co/tJLKkp0/IMG-3669-1024x764-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+              <div
+                data-aos-duration="10000"
+                data-aos="zoom-in-left"
+                className="text-white w-1/2 md:text-start text-center mt-5 md:mt-20"
+              >
+                <h1 className="text-6xl  font-bold">Hi There!</h1>
+                <h1 className="text-4xl   font-bold">
+                  Welcome to Sports Bike zone
+                </h1>
+                <p className="my-2 text-white font-semibold">
+                  Its a biggest sports bike Online selling platform.We have
+                  selling bike since 2012.If need any help please feel free to
+                  contact.
+                </p>
 
-    const { t } = useTranslation()
-
-    return (
-        <div className="carousel w-full sm:hidden ">
-            <div id="slide1" className="carousel-item relative w-full">
-                <div className=" w-full   flex ">
-                    <div className="w-1/2 justify-center items-center">
-                       <div className="justify-center mt-16">
-                       <h1 className="text-center text-4xl font-['Open_Sans'] font-bold text-white mt-10 ">{t("Home.Banner.first.title")}</h1>
-                        <h1 className="text-center text-3xl font-['Open_Sans'] font-semibold text-white mt-10"> {t("Home.Banner.first.subtitle")}</h1>
-                        <button className="btn btn-neutral justify-center lg:ml-40 bg-[#071522] w-[332px]  h-10  text-center rounded-[25px] mt-10" onClick={()=>document.getElementById('my_modal_3').showModal()}>{t("Home.Banner.first.btn")}</button>
-                       </div>
-                    </div>
-                    <div className="w-1/2 justify-center mt-10 ml-10">
-                    <img src=" https://i.ibb.co/D1Tkqn4/image.png" alt="" className="w-96" />
-                    </div>
-                </div>
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="text-black">❮</a>
-                    <a href="#slide2" className="text-black">❯</a>
-                </div>
-                <Modal></Modal>
+                <Link to="/blogs">
+                  <button
+                    type="button"
+                    className="px-4 mx-auto my-3 py-2 font-semibold rounded  border border-purple-500 hover:border-gray-00 bg-purple-500 hover:bg-white text-white transition  hover:text-purple-500"
+                  >
+                    Read Our Blogs
+                  </button>
+                </Link>
+              </div>
             </div>
-            <div id="slide2" className="carousel-item relative w-full">
-            <div className=" w-full h-96  flex ">
-                    <div className="w-1/2 justify-center items-center">
-                       <div className="justify-center mt-16">
-                       <h1 className="text-center text-4xl font-['Open_Sans'] font-bold text-white mt-10 ">{t("Home.Banner.second.title")}</h1>
-                        <h1 className="text-center text-3xl font-['Open_Sans'] font-semibold text-white mt-10"> {t("Home.Banner.second.subtitle")}</h1>
-                        <Link to="/appointment">
-                        <button className="btn btn-neutral justify-center lg:ml-40 bg-[#071522] w-[332px]  h-10  text-center rounded-[25px] mt-10">{t("Home.Banner.second.btn")}</button>
-                        </Link>
-                       </div>
-                    </div>
-                    <div className="w-1/2 justify-center mt-20 ml-10">
-                    <img src="https://i.ibb.co/Nrng37j/lawyers.png" alt="" className="w-96" />
-                    </div>
-                </div>
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="text-black">❮</a>
-                    <a href="#slide1" className="text-black">❯</a>
-                </div>
-            </div>
-            
+          </SwiperSlide>
+          <SwiperSlide style={{ backgroundImage: `url('https://i.ibb.co/8zmFRc9/360-F-628355502-xbtygoyym2-BKd-QHOZyip-XX03ej-Nekfk-V.jpg')` }}>
+            <div className="justify-items-center my-20 mb-10 px-10 md:px-20 flex flex-row-reverse  ">
+              <div
+                className="w-1/2"
+                data-aos-duration="10000"
+                data-aos="zoom-in-down"
+              >
+                <img
+                  className="w-full"
+                  src="https://i.ibb.co/tJLKkp0/IMG-3669-1024x764-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+              <div
+                data-aos-duration="10000"
+                data-aos="zoom-in-left"
+                className="text-white-800 w-1/2 md:text-start text-center mt-5 md:mt-20"
+              >
+                <h1 className="text-6xl text-white  font-bold">Hi There!</h1>
+                <h1 className="text-4xl text-white   font-bold">
+                  Welcome to Sports Bike zone
+                </h1>
+                <p className="my-2 text-gray-600 font-semibold">
+                  Its a biggest sports bike Online selling platform.We have
+                  selling bike since 2012.If need any help please feel free to
+                  contact.
+                </p>
 
-        </div>
-    );
+                <Link to="/blogs">
+                  <button
+                    type="button"
+                    className="px-4 mx-auto my-3 py-2 font-semibold rounded  border border-purple-500 hover:border-gray-00 bg-purple-500 hover:bg-white text-white transition  hover:text-purple-500"
+                  >
+                    Read Our Blogs
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide  style={{backgroundImage: `url('https://i.ibb.co/8zmFRc9/360-F-628355502-xbtygoyym2-BKd-QHOZyip-XX03ej-Nekfk-V.jpg')` }}>
+            <div className="justify-items-center my-20 mb-10 px-10 md:px-20 flex flex-row-reverse  ">
+              <div
+                className="w-1/2"
+                data-aos-duration="10000"
+                data-aos="zoom-in-down"
+              >
+                <img
+                  className="w-full h-96"
+                  src="https://i.ibb.co/tJLKkp0/IMG-3669-1024x764-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+              <div
+                data-aos-duration="10000"
+                data-aos="zoom-in-left"
+                className="text-white w-1/2 md:text-start text-center mt-5 md:mt-20"
+              >
+                <h1 className="text-6xl text-white font-bold">Hi There!</h1>
+                <h1 className="text-4xl text-white  font-bold">
+                  Welcome to Sports Bike zone
+                </h1>
+                <p className="my-2 text-white font-semibold">
+                  Its a biggest sports bike Online selling platform.We have
+                  selling bike since 2012.If need any help please feel free to
+                  contact.
+                </p>
+
+                <Link to="/blogs">
+                  <button
+                    type="button"
+                    className="px-4 mx-auto my-3 py-2 font-semibold rounded  border border-purple-500 hover:border-gray-00 bg-purple-500 hover:bg-white text-white transition  hover:text-purple-500"
+                  >
+                    Read Our Blogs
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <div className="autoplay-progress" slot="container-end">
+            <svg viewBox="0 0 48 48" ref={progressCircle}>
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span ref={progressContent}></span>
+          </div>
+        </Swiper>
+      </>
+    </div>
+  );
 };
 
 export default Carusel;

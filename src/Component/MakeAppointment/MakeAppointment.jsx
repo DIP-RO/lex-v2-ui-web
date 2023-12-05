@@ -3,7 +3,7 @@ import Loading from "../Loading/Loading";
 const MakeAppointment = () => {
   <Loading/>
   return (
-    <div className="hero bg-[#1d344a] sm:hidden">
+    <div className="hero bg-[#212222] sm:hidden">
       <div className="hero-content flex-col lg:flex-row-reverse md:flex-col items-center">
         <img
           src="https://i.ibb.co/QJCKyp0/image.png"

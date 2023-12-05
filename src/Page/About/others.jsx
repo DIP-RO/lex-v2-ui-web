@@ -13,13 +13,13 @@ import Loading from "../../Component/Loading/Loading";
 const Others = () => {
   <Loading/>
   return (
-    <div className="bg-slate-900 py-10">
+    <div className="bg-[#f5f1f1] py-10">
       <div className=" ">
-        <h2 className="text-4xl text-center text-gray-50 font-bold">
+        <h2 className="text-4xl text-center text-black font-bold">
           About us
         </h2>
       </div>
-      <div className="flex justify-around items-center  md:flex-row sm:flex-col-reverse text-gray-50 py-10">
+      <div className="flex justify-around items-center  md:flex-row sm:flex-col-reverse text-black py-10">
         <div className=" md:text-start text-center flex justify-center items-center">
           <div>
             <h2 className="text-3xl my-4 font-bold">Our Location</h2>
@@ -32,7 +32,7 @@ const Others = () => {
               <FaPhone></FaPhone>
               <p className="px-2">Phone: 012323232</p>
             </div>
-            <h2 className="text-3xl md:justify-start justify-center my-4 text-gray-300 font-bold">
+            <h2 className="text-3xl md:justify-start justify-center my-4 text-blackfont-bold">
               Find us On Social Media
             </h2>
             <div className="flex md:justify-start justify-center my-2">

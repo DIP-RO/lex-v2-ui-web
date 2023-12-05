@@ -8,7 +8,7 @@ import Loading from "../Component/Loading/Loading";
 const Main = () => {
     <Loading/>
     return (
-        <div className=" sm:max-w-sm">
+        <div className=" sm:max-w-sm ">
             <Navbar ></Navbar>
             
             <Outlet></Outlet>

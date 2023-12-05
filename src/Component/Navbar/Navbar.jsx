@@ -46,7 +46,7 @@ const Navbar = () => {
     };
 <Loading/>
     return (
-        <div className="navbar sticky z-10 top-0 bg-[#1d344a] sm:hidden  flex justify-between border-b-2 border-black ">
+        <div className="navbar sticky z-10 top-0 bg-[#212222]  sm:hidden  flex justify-between border-b-2 border-black ">
             <div className="navbar-start  ">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
