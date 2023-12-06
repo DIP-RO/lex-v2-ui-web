@@ -49,7 +49,7 @@ const LexAi = () => {
     return (
         <div className="flex-1 justify-center items-center ">
 
-            <div className=" bg-[#1d344a] sm:min-h-screen min-h-screen">
+            <div className=" bg-[#212222] sm:min-h-screen min-h-screen">
 
                 <div className="text-4xl font-['Inter'] font-semibold text-white p-5 text-center">
                     Welcome to LEX-AI

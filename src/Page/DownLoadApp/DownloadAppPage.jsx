@@ -1,9 +1,22 @@
-
-
+import { RiArrowRightDoubleFill } from "react-icons/ri";
+import Location from "../../Component/Location/Location";
 const DownloadAppPage = () => {
+  const Data = {
+    title: {
+      label: 'Our App',
+      subLabel: null,
+
+    },
+    links: [
+      { label: null, icon: null },
+      { label: 'Our App', icon: RiArrowRightDoubleFill, color: 'text-[#2e3094]' },
+    ],
+  };
     return (
       
-              <div className="container mx-auto p-5">
+              <div>
+                <Location {...Data} />
+                <div className="container mx-auto p-5">
                 <h1 className="text-3xl font-bold text-center mb-5">Download Our App</h1>
           
                 <div className="flex flex-col items-center">
@@ -27,6 +40,7 @@ const DownloadAppPage = () => {
                     </a>
                   </div>
                 </div>
+              </div>
               </div>
     );
 };

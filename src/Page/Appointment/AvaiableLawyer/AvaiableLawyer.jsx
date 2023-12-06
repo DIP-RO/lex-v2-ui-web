@@ -1,41 +1,47 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Loading from "../../../Component/Loading/Loading";
+import { FaFacebookF } from "react-icons/fa";
+import { CiInstagram } from "react-icons/ci";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
 
 const AvaiableLawyer = () => {
     const [lawyers, setLawyers] = useState([]);
-    
+
     useEffect(() => {
         fetch("https://attractive-ruby-cow.cyclic.app/api/v1/lawyers/lawyers")
             .then((response) => response.json())
             .then((data) => setLawyers(data))
             .catch((error) => console.error("Error fetching law data:", error));
     }, []);
-<Loading/>
+    <Loading />
     return (
-        <div className="h-[450px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 lg:gap-14 md:gap-5 mt-10 sm:max-w-sm sm:gap-4 md:min-h-fit">
+        <div className="h-fit grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 lg:gap-8 md:gap-5 mt-5 sm:max-w-sm sm:gap-4 md:min-h-fit">
             {lawyers.map((lawyer) => (
                 <div key={lawyer._id}>
                     <Link to={`/lawyardetails/${lawyer._id}`}>
-                        <button
-                            className="flex btn flex-col gap-5 lg:w-[270px] lg:h-[350px] md:w-[270px] md:h-[350px] sm:h-48 sm:w-44 items-center p-8 rounded-[22px] bg-[#1d344a] hover:bg-[#1d344a]"
-                        >
-                            <div className="flex flex-col justify-center items-center ">
-                                <div>
-                                    <img src={lawyer.image} className="w-[75px] h-[75px] rounded-full online" />
+                        <div className="w-[300px] bg-base-100 shadow-xl m-20">
+                            <figure ><img src="https://faculty.daffodilvarsity.edu.bd/images/teacher/6ee58b6017ad9f5865715be5bfc5711e.JPG" alt="Shoes" className="w-[300px] h-[350px]" /></figure>
+                            <div className="flex flex-col items-center justify-center  z-10 ">
+                                <div className="bg-[#343a40]  rounded-3xl -mt-7 flex gap-4 p-5 items-center justify-center">
+
+                                    <FaFacebookF className=" text-white" />
+                                    <CiInstagram className=" text-white" />
+                                    <FaTwitter className=" text-white" />
+                                    <FaLinkedin className=" text-white" />
                                 </div>
-                                <div className="text-center font-['Montserrat'] font-bold tracking-[2] leading-[19.2px] uppercase text-[#bdcdf1] mb-0">
-                                    {lawyer.name}
-                                </div>
-                                <div className="text-center font-['Open_Sans'] leading-[25.6px] text-white sm:hidden">
-                                    {lawyer.description}
-                                </div>
+                                <h2 className="card-title">
+                                Dr. S.M. Saiful Hoque
+                                </h2>
+                                <p className=" my-3">Family Consultant</p>
+
                             </div>
-                        </button>
+                        </div>
                     </Link>
                 </div>
             ))}
-            
+
         </div>
     );
 };

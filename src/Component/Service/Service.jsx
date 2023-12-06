@@ -24,7 +24,7 @@ const Service = () => {
     {
       "id": 4,
       "name": "Education Law",
-      "description": "Our Attorneys are exceptionally competent....We always offer the top attorneys to resolve...",
+      "description": "Our Attorneys are exceptionally competent....",
       "icon": <FaGraduationCap />
     },
     {
@@ -49,17 +49,17 @@ const Service = () => {
           {practiceAreas?.map((area) => (
             <div
               key={area.id}
-              className="bg-white rounded-lg shadow-md p-6 flex flex-col justify-between"
+              className="bg-[#212222] rounded-lg shadow-md p-6 flex flex-col justify-between"
             >
               <div className="flex justify-center mb-4">
-                <span className="text-4xl">{area.icon}</span>
+                <span className="text-4xl text-white">{area.icon}</span>
               </div>
               <div>
-                <h2 className="text-xl text-center font-semibold mb-4">{area.name}</h2>
-                <p className="text-gray-700">{area.description}</p>
+                <h2 className="text-xl text-center font-semibold mb-4 text-white">{area.name}</h2>
+                <p className=" text-white">{area.description}</p>
               </div>
-              <div className="flex justify-center">
-                <button className="btn bg-[#1d344a] lg:mt-2 md:mt-8 hover:bg-[#1d344a] text-white my-10">
+              <div className="flex justify-center mt-5">
+                <button className="btn  lg:mt-2 md:mt-8 bg-[#212222] hover:bg-[#212222] text-white my-10">
                   <Link to="/allService">Read MORE</Link>
                 </button>
               </div>

@@ -1,44 +1,77 @@
-import { Link } from "react-router-dom";
 import Loading from "../../../Component/Loading/Loading";
-
+import { CiCalendarDate } from "react-icons/ci";
+import { FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const FindBlog = () => {
     <Loading/>
+    const blog = [
+        {
+          id: 1,
+          name: 'stella larson',
+          message: 'Sample text. Click to select the text box. Click again or double click to start editing the text.',
+          image: "https://i.ibb.co/b7z8Z3t/image.png",
+        },
+        {
+          id: 2,
+          name: 'Olga jhonso',
+          message: 'Sample text. Click to select the text box. Click again or double click to start editing the text.',
+          image: "https://i.ibb.co/19myfyW/image.png",
+        },
+        {
+          id: 3,
+          name: 'Paul Smith',
+          message: 'Sample text. Click to select the text box. Click again or double click to start editing the text.',
+          image: "https://i.ibb.co/BZtx9Gf/image.png",
+        },
+      ]
+
+
+
     return (
-        <div className="w-full p-10 sm:mb-5">
-            <div className="flex justify-center items-center mb-10">
-            <input className="w-1/2 h-10 rounded-[35px] mt-5 px-5" type="url" placeholder="Search" />
-            </div>
-            <div className="hero min-h-fit border-solid border-2 p-5 mt-10 bg-[#1d344a] hover:bg-[#1d344a] border-white ">
-                <div className="hero-content flex-col lg:flex-row-reverse sm:flex-row-reverse">
-                    <div className="w-1/2 flex items-center justify-center">
-                   <div>
-                   <img src="https://i.ibb.co/7vVnKRr/image.png" className=" w-48 h-48 sm:h-24 rounded-lg shadow-2xl" />
-                   </div>
-                    </div>
-                    <div className="w-1/2 flex lg:items-center justify-start flex-col">
-                        <h1 className="text-5xl font-bold text-white sm:text-lg">Box Office News!</h1>
-                        <p className="py-6 text-white sm:hidden">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <Link to='/blog-details/:id'><button className="btn sm:btn-xs sm:w-3/4 sm-mt-2">Read Now</button></Link>
-                    </div>
-                </div>
-            </div>
-            <div className="hero min-h-fit border-solid border-2 p-5 mt-10 bg-[#1d344a] hover:bg-[#1d344a] border-white ">
-                <div className="hero-content flex-col lg:flex-row-reverse sm:flex-row-reverse">
-                    <div className="w-1/2 flex items-center justify-center">
-                   <div>
-                   <img src="https://i.ibb.co/7vVnKRr/image.png" className=" w-48 h-48 sm:h-24 rounded-lg shadow-2xl" />
-                   </div>
-                    </div>
-                    <div className="w-1/2 flex lg:items-center justify-start flex-col">
-                        <h1 className="text-5xl font-bold text-white sm:text-lg">Box Office News!</h1>
-                        <p className="py-6 text-white sm:hidden">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <Link to='/blog-details/:id'><button className="btn sm:btn-xs sm:w-3/4 sm-mt-2">Read Now</button></Link>
-                    </div>
-                </div>
-            </div>
-            <div className="flex items-center justify-center my-10">
-            <button className="btn ">View More..</button>
-            </div>
+        <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 lg:gap-8 md:gap-5 mt-5 mx-10">
+            {blog.map((blog) => (
+                 <div key={blog.id} className="bg-gray-100 flex items-center justify-center hover:-mt-10">
+                 <div className="max-w-md bg-white rounded overflow-hidden shadow-lg">
+                     <img
+                         className="w-full h-64 object-cover"
+                         src="https://i.ibb.co/Hqn87ND/3.jpg"
+                         alt="Card Image"
+                     />
+                     <div className="flex justify-center">
+                         <button
+                             className="text-white px-10 py-2 rounded-full"
+                             style={{ backgroundColor: '#b69d74', marginTop: '-20px' }}
+                         >
+                             Rights Case
+                         </button>
+                     </div>
+ 
+                     <div className="px-6 py-4">
+                         <div className="font-bold text-xl mb-2">
+                             Justice May For You If You Are Innocent
+                         </div>
+                         <div className="flex gap-5">
+                             <p className="text-gray-700 text-base mb-2 flex items-center justify-center gap-2">
+                             <CiCalendarDate /> December 5, 2023
+                             </p>
+                             <p className="text-gray-700 text-base mb-2 flex items-center justify-center gap-2">
+                             <FaUser /> John Doe
+                             </p>
+                         </div>
+ 
+                         <p className="text-gray-700 text-base">
+                             Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                             Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                         </p>
+                         <Link to='/blog-details/:id'>
+                         <button className="text-[#b69d74] font-medium mt-4">
+                             Read More<i className="fa-solid fa-angle-right"></i>
+                         </button>
+                         </Link>
+                     </div>
+                 </div>
+             </div>
+            ))}
         </div>
     );
 };

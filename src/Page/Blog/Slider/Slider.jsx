@@ -42,7 +42,8 @@ const Slider = () => {
 
   return (
     <div className="min-h-fit flex  items-center flex-col my-10 ">
-      <h1 className="text-white text-3xl font-bold border-solid border-4 p-3 rounded-2xl mb-5 sm:m-2">Recent Blog</h1>
+      <h1 className="text-black text-3xl font-bold border-solid border-4 border-black p-3 rounded-2xl mb-5 sm:m-2">
+        Popular Writer</h1>
       <Swiper
 
         freeMode={true}
@@ -72,7 +73,7 @@ const Slider = () => {
       >
 
         {testymony.map((testy) => (
-          <SwiperSlide key={testy.id} className="w-[200px] h-[350px]  btn bg-[#1d344a] hover:bg-[#1d344a]">
+          <SwiperSlide key={testy.id} className="w-[200px] h-[350px]  btn bg-[#212222] hover:bg-[#212222]">
             <div className=" w-full  p-3">
 
               <div className="flex items-center justify-center">

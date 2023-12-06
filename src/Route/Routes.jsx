@@ -31,7 +31,7 @@ import AllUser from "../Page/DashboardHome/AllUser";
 import Service from "../Component/Service/Service";
 import AllServices from "../Component/Service/AllServices";
 
-import DownloadAppPage from "../Component/DownLoadApp/DownloadAppPage";
+import DownloadAppPage from "../Page/DownLoadApp/DownloadAppPage";
 
  export const router = createBrowserRouter([
     {

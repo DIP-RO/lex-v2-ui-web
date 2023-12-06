@@ -5,6 +5,15 @@ import swal from 'sweetalert';
 import { AuthContext } from '../../Context/UserContext';
 import ReviewCard from '../../Global/ReviewCard/ReviewCard';
 import Loading from "../../Component/Loading/Loading";
+import { FaFacebookF, FaPhone } from "react-icons/fa";
+import { CiInstagram } from "react-icons/ci";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import { IoLocationSharp } from "react-icons/io5";
+import AvaiableLawyer from "../Appointment/AvaiableLawyer/AvaiableLawyer";
+import { RiArrowRightDoubleFill } from "react-icons/ri";
+import Location from "../../Component/Location/Location";
 
 const LawyerDetails = () => {
     const { user } = useContext(AuthContext);
@@ -38,123 +47,181 @@ const LawyerDetails = () => {
         fetchReviews();
     }, [lawyer._id]);
 
-    const handleAddReview = (data) => {
-        const addReview = {
-            userName: data.name,
-            userEmail: user.email,
-            LawyerId: lawyer._id,
-            productName: lawyer.name,
-            rating: data.rating,
-            comment: data.description
-        };
+    // const handleAddReview = (data) => {
+    //     const addReview = {
+    //         userName: data.name,
+    //         userEmail: user.email,
+    //         LawyerId: lawyer._id,
+    //         productName: lawyer.name,
+    //         rating: data.rating,
+    //         comment: data.description
+    //     };
 
-        fetch("https://attractive-ruby-cow.cyclic.app/api/v1/reviews/reviews", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(addReview),
-        })
-            .then((res) => res.json())
-            .then((result) => {
-                console.log(result);
-                swal({
-                    title: "Good job!",
-                    text: "You updated YOUR Review",
-                    icon: "success",
-                    button: "DONE",
-                });
-                // Call fetchReviews to update reviews after successful review submission
-                fetchReviews();
-            })
-            .catch((err) => console.error(err));
-    };
+    //     fetch("https://attractive-ruby-cow.cyclic.app/api/v1/reviews/reviews", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(addReview),
+    //     })
+    //         .then((res) => res.json())
+    //         .then((result) => {
+    //             console.log(result);
+    //             swal({
+    //                 title: "Good job!",
+    //                 text: "You updated YOUR Review",
+    //                 icon: "success",
+    //                 button: "DONE",
+    //             });
+    //             // Call fetchReviews to update reviews after successful review submission
+    //             fetchReviews();
+    //         })
+    //         .catch((err) => console.error(err));
+    // };
 
 
     const handleAppointment = () => {
 
-        const AppointmentData = {
-            userName: user.displayName,
-            userEmail: user.email,
-            image: lawyer.image,
-            specialization: lawyer.specialization,
-            lawyerId: lawyer._id,
-            lawyerName: lawyer.name,
-        }
-        fetch('https://attractive-ruby-cow.cyclic.app/api/v1/appointments/appointments', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(AppointmentData)
-        })
-            .then(res => res.json())
-            .then(result => {
-                console.log(result);
+        // const AppointmentData = {
+        //     userName: user.displayName,
+        //     userEmail: user.email,
+        //     image: lawyer.image,
+        //     specialization: lawyer.specialization,
+        //     lawyerId: lawyer._id,
+        //     lawyerName: lawyer.name,
+        // }
+        // fetch('https://attractive-ruby-cow.cyclic.app/api/v1/appointments/appointments', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json',
+        //     },
+        //     body: JSON.stringify(AppointmentData)
+        // })
+        //     .then(res => res.json())
+        //     .then(result => {
+        //         console.log(result);
                 swal({
                     title: "Good job!",
-                    text: `${ lawyer.name} is successfully added`,
+                    text: `Appointment is successfully added`,
                     icon: "success",
                     button: "DONE",
                 });
-                
-            })
-            .catch(err => console.error(err));
+
+            // })
+            // .catch(err => console.error(err));
 
     };
+
     const handleBookmark = () => {
 
-        const BookmarkData = {
-            userEmail: user.email,
-            image: lawyer.image,
-            specialization: lawyer.specialization,
-            name: lawyer.name,
-            LawyerId: lawyer._id,
-        }
+        // const BookmarkData = {
+        //     userEmail: user.email,
+        //     image: lawyer.image,
+        //     specialization: lawyer.specialization,
+        //     name: lawyer.name,
+        //     LawyerId: lawyer._id,
+        // }
 
-        fetch('https://attractive-ruby-cow.cyclic.app/api/v1/bookmarks/bookmarks', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-            },
-            body: JSON.stringify(BookmarkData)
-        })
-            .then(res => res.json())
-            .then(result => {
-                console.log(result);
+        // fetch('https://attractive-ruby-cow.cyclic.app/api/v1/bookmarks/bookmarks', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json',
+        //     },
+        //     body: JSON.stringify(BookmarkData)
+        // })
+        //     .then(res => res.json())
+        //     .then(result => {
+        //         console.log(result);
                 swal({
                     title: "Good job!",
-                    text: `${ lawyer.name} is successfully added`,
+                    text: `Bookmark is successfully added`,
                     icon: "success",
                     button: "DONE",
                 });
-                
-            })
-            .catch(err => console.error(err));
+
+            // })
+            // .catch(err => console.error(err));
     };
+    const Data = {
+        title: {
+          label: 'Lawyer Details',
+          subLabel: null,
+    
+        },
+        links: [
+          { label: null, icon: null },
+          { label: 'Lawyer Details', icon: RiArrowRightDoubleFill, color: 'text-[#2e3094]' },
+        ],
+      };
 
-<Loading/>
+    <Loading />
     return (
-        <div className='sm:max-w-sm'>
-            <div className="hero  bg-gray-900 sm:max-w-sm">
-                <div className="hero-content  flex-col lg:flex-row-reverse md:flex-row-reverse  w-fit h-fit">
-                    <div className='lg:w-1/2 md:w-1/2 sm:full  '>
-                        <img src={lawyer.image} alt="" className="h-60 w-60  rounded-lg shadow-2xl" />
-                    </div>
-                    <div className="w-1/2 sm:full sm:max-w-sm">
-                        <h1 className="text-3xl text-white font-bold w-full">{lawyer.name}</h1>
-                        <p className="py-3 text-white w-full">She is a {lawyer.specialization}</p>
-                        <p className="py-3 text-white w-full sm:hidden"> {lawyer.description}</p>
+        <div>
+             <Location {...Data} />
+            <div className='sm:max-w-sm flex justify-center items-center'>
+                <div className="hero  bg-white sm:max-w-sm w-4/12 m-5">
+                    <div className="hero-content  flex-col  w-full h-fit shadow-lg shadow-stone-950">
+                        <div className="flex flex-col justify-center items-center">
+                            <div className='  '>
+                                <img src='https://faculty.daffodilvarsity.edu.bd/images/teacher/6ee58b6017ad9f5865715be5bfc5711e.JPG' alt="" className="h-60 w-60   shadow-2xl" />
+                            </div>
+                            <div className="bg-[#343a40] rounded-lg -mt-7 flex gap-2 p-5">
 
-                        <div className='flex'>
-                            <button className='btn btn-sm mr-2' onClick={handleAppointment}>Appointment Now</button>
-                            <button className='btn btn-sm' onClick={handleBookmark} >Bookmark</button>
+                                <FaFacebookF className=" text-white" />
+                                <CiInstagram className=" text-white" />
+                                <FaTwitter className=" text-white" />
+                                <FaLinkedin className=" text-white" />
+                            </div>
+                        </div>
+                        <div className="w-3/4 sm:full sm:max-w-sm">
+                            <h1 className="text-3xl text-black font-bold w-full">Contact info</h1>
+                            <p className="py-3 text-black w-full flex items-center gap-2"><FaPhone /> Call : +07 554 332 322</p>
+                            <p className="py-3 text-black w-full sm:hidden flex items-center gap-2"><AiOutlineMail /> hello@lyzo.com</p>
+                            <p className="py-3 text-black w-full sm:hidden flex items-center gap-2"> <IoLocationSharp />4th Floor, 408 No Chamber</p>
+                            <h1 className="text-3xl text-black font-bold w-full mt-5">Working hours</h1>
+                            <p className="py-3 text-black w-full flex items-center gap-3 ">Monday <div className="divider w-20 text-black"></div>  9:00 am - 8:00 pm</p>
+                            <p className="py-3 text-black w-full flex items-center gap-3 ">Monday <div className="divider w-20 text-black"></div>  9:00 am - 8:00 pm</p>
+                            <p className="py-3 text-black w-full flex items-center gap-3 ">Monday <div className="divider w-20 text-black"></div>  9:00 am - 8:00 pm</p>
+
+                            <div className='flex mt-10 '>
+                                <button className='btn btn-sm bg-[#343a40] hover:bg-[#343a40] mr-2 text-white' onClick={handleAppointment}>Appointment Now</button>
+                                <button className='btn btn-sm bg-[#343a40] hover:bg-[#343a40] text-white' onClick={handleBookmark} >Bookmark</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div className="w-7/12 mx-5">
+                    <div>
+                        <h1 className="text-3xl text-black font-bold w-full">Dr. S.M. Saiful Hoquer</h1>
+                        <h1 className="text-xl text-black font-bold w-full mt-3">Public Prosecutor</h1>
+                        <h1 className="text-xl text-black  w-full mt-3">Bachelor of Laws in LL.B. (Hons) in the United Kingdom</h1>
+                    </div>
+                    <div>
+                        <h1 className="text-xl text-black font-bold w-full mt-10">Biography</h1>
+                        <p className="mt-2 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
 
-            <div className="hero min-h-screen  bg-gray-900 sm:max-w-sm">
+                            Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div>
+                        <h1 className="text-xl text-black font-bold w-full mt-5">Education</h1>
+                        <p className="mt-2 text-lg">PHD degree in Criminal Law at University of Lyzo Internatinal (2006)</p>
+                        <p className="mt-2 text-lg">Master of Family Law at University of Lyzo International (2002)</p>
+                        <p className="mt-2 text-lg">MBBS LLB (Hon’s) in at University of Lyzo International (2002)</p>
+                        <p className="mt-2 text-lg">Higher Secondary Certificate at Lyzo International collage (1991)</p>
+
+                    </div>
+                    <div>
+                        <h1 className="text-xl text-black font-bold w-full mt-5">Biography</h1>
+                        <p className="mt-2 text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+
+                            Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+
+                    </div>
+                    <button className='btn  bg-[#343a40] hover:bg-[#343a40] text-white mt-14' >Download CV</button>
+                </div>
+
+
+                {/* <div className="hero min-h-screen  bg-gray-900 sm:max-w-sm">
                 <div className="hero-content flex-col lg:flex-row md:flex-row">
                     <div className="bg-gray-900 lg:p-11">
                         {
@@ -242,6 +309,15 @@ const LawyerDetails = () => {
                         </div>
                     </div>
                 </div>
+            </div> */}
+            </div>
+            <div className="flex flex-col justify-center items-center mt-20">
+            <div className="bg-[#1c5168] w-1/2 flex flex-col justify-center sm:mt-3  sm:w-3/4 sm:p-5 h-20 shrink-0 items-center rounded-[35px]">
+                <div className="text-6xl lg:text-4xl md:text-3xl sm:text-lg  font-['Poppins'] font-semibold leading-[32px] text-white"> 
+                Our More Expert Attorneys
+                </div>
+            </div>
+            <AvaiableLawyer></AvaiableLawyer>
             </div>
         </div>
     );

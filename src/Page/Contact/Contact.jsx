@@ -1,11 +1,24 @@
 import Loading from "../../Component/Loading/Loading";
+import Location from "../../Component/Location/Location";
 import Question from "../../Component/Question/Question";
 import ContactModal from "./ContactModal/ContactModal";
-
+import { RiArrowRightDoubleFill } from "react-icons/ri";
 const Contact = () => {
+  const Data = {
+    title: {
+      label: 'CONTACT',
+      subLabel: null,
+
+    },
+    links: [
+      { label: null, icon: null },
+      { label: 'CONTACT', icon: RiArrowRightDoubleFill, color: 'text-[#2e3094]' },
+    ],
+  };
   <Loading/>
   return (
     <div className="flex flex-col items-center">
+      <Location {...Data} />
       <Question></Question>
 
       <div className="bg-[rgba(200,102,102,0.22)] my-10 w-full md:w-3/4 lg:w-1/2 flex flex-col justify-center items-center gap-6 py-8 rounded-lg px-4 md:px-8">

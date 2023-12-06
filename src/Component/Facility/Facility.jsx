@@ -6,7 +6,7 @@ const Facility = () => {
     return (
         <div
             id="DivmyRoot"
-            className="bg-[#1d344a] flex flex-col lg:gap-24 w-full h-[478px]  items-center lg:px-[206px] py-12 sm:hidden"
+            className="bg-[#212222] flex flex-col lg:gap-24 w-full h-[478px]  items-center lg:px-[206px] py-12 sm:hidden"
         >
             <div
                 id="HeadingOurFacilites"
