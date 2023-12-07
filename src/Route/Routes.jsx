@@ -29,7 +29,6 @@ import AllAppointment from "../Page/DashboardHome/AllAppointment";
 import AddLawyer from "../Page/DashboardHome/AddLawyer";
 import AllUser from "../Page/DashboardHome/AllUser";
 import Service from "../Component/Service/Service";
-import AllServices from "../Component/Service/AllServices";
 import CaseStudyDetails from "../Page/CaseStudyDetails/CaseStudyDetails";
 
 import DownloadAppPage from "../Page/DownLoadApp/DownloadAppPage";
@@ -91,10 +90,6 @@ import CaseStudy from "../Page/CaseStudy/CaseStudy";
         {
           path: "/service",
           element:<Service></Service>,
-        },
-        {
-          path: "/allService",
-          element:<AllServices></AllServices>,
         },
         {
           path: "/blog-details/:id",

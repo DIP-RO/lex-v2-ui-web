@@ -14,6 +14,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import AvaiableLawyer from "../Appointment/AvaiableLawyer/AvaiableLawyer";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
 import Location from "../../Component/Location/Location";
+import Modal from "../../Component/Modal/Modal";
 
 const LawyerDetails = () => {
     const { user } = useContext(AuthContext);
@@ -184,11 +185,12 @@ const LawyerDetails = () => {
                             <p className="py-3 text-black w-full flex items-center gap-3 ">Monday <div className="divider w-20 text-black"></div>  9:00 am - 8:00 pm</p>
 
                             <div className='flex mt-10 '>
-                                <button className='btn btn-sm bg-[#343a40] hover:bg-[#343a40] mr-2 text-white' onClick={handleAppointment}>Appointment Now</button>
+                                <button className='btn btn-sm bg-[#343a40] hover:bg-[#343a40] mr-2 text-white' onClick={()=>document.getElementById('my_modal_3').showModal()}>Appointment Now</button>
                                 <button className='btn btn-sm bg-[#343a40] hover:bg-[#343a40] text-white' onClick={handleBookmark} >Bookmark</button>
                             </div>
                         </div>
                     </div>
+                    <Modal></Modal>
                 </div>
                 <div className="w-7/12 mx-5">
                     <div>

@@ -7,7 +7,10 @@
         "blog": "Blog",
         "search": "search",
         "about": "About",
-        "contact": "Contact"
+        "contact": "Contact",
+        "app": "App",
+        "login": "login",
+        "casestudies": "Case Studies"
     },
     "Banner": {
         "first" :{

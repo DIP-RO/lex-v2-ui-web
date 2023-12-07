@@ -74,13 +74,14 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex cursor-pointer">
                 <ul className="menu menu-horizontal p-0">
-                    <li className='text-white mt-5 hover:text-[#b69d74] normal-case'><Link to="/">{t("Home.Navbar.home")}</Link></li>
-                    <li className='text-white hover:text-[#b69d74] mt-5'><Link to="/appointment">{t("Home.Navbar.appointment")}</Link></li>
-                    <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/blog">{t("Home.Navbar.blog")}</Link></li>
-                    <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/about">{t("Home.Navbar.about")}</Link></li>
-                    <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/contact">{t("Home.Navbar.contact")}</Link></li>
-                    <li className='text-white mt-5 hover:text-[#b69d74] '><Link to="/app">App</Link></li>
-                    <li className='text-white mt-5 hover:text-[#b69d74] mr-14'><Link to="/casestudy">Case Studies</Link></li>
+                    <li className=' mt-5 '><Link to="/"><button className="text-white hover:text-[#b69d74]">
+                    {t("Home.Navbar.home")}</button></Link></li>
+                    <li className='text-white hover:text-[#b69d74] mt-5'><Link to="/appointment"><button className="text-white hover:text-[#b69d74]">{t("Home.Navbar.appointment")}</button></Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/blog"><button className="text-white hover:text-[#b69d74]">{t("Home.Navbar.blog")}</button></Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/about"><button className="text-white hover:text-[#b69d74]">{t("Home.Navbar.about")}</button></Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/contact"><button className="text-white hover:text-[#b69d74]">{t("Home.Navbar.contact")}</button></Link></li>
+                    <li className=" mt-5"><Link to="/app"><button className="text-white hover:text-[#b69d74] ">{t("Home.Navbar.app")}</button></Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74] mr-14'><Link to="/casestudy"><button className="text-white hover:text-[#b69d74]">{t("Home.Navbar.casestudies")}</button></Link></li>
                     <li>
                         <select className="bg-white mt-2 h-12 hover:bg-white rounded-full" onChange={onChangeLang}>
                             <option value="en" className="lang">
@@ -123,7 +124,7 @@ const Navbar = () => {
                                 </div>
                             </Link>
                         </li>
-                        : <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/login">Login</Link></li>
+                        : <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/login"><button className="text-white hover:text-[#b69d74]">{t("Home.Navbar.login")}</button></Link></li>
 
                     }
                 </ul>
