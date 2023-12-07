@@ -25,8 +25,8 @@ const LawDetails = () => {
     }, [data.Problem]);
 <Loading/>
     return (
-        <div>
-            <div className="w-full bg-[#1d344a]">
+        <div className="bg-[#212222]">
+            <div className="w-full bg-[#212222]">
                 <div className="card-body">
                     <h2 className="card-title text-white ">{data.Problem}</h2>
                     <p className="text-white"><span className="text-xl font-semibold">VICTIM:</span> {data.Victims}</p>
