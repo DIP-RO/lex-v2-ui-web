@@ -1,65 +1,72 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Loading from "../Loading/Loading";
-
+import swal from 'sweetalert';
 
 const Modal = () => {
-    <Loading/>
+    const navigate = useNavigate();
+    const handleAppointment = () => {
+
+        // const AppointmentData = {
+        //     userName: user.displayName,
+        //     userEmail: user.email,
+        //     image: lawyer.image,
+        //     specialization: lawyer.specialization,
+        //     lawyerId: lawyer._id,
+        //     lawyerName: lawyer.name,
+        // }
+        // fetch('https://attractive-ruby-cow.cyclic.app/api/v1/appointments/appointments', {
+        //     method: 'POST',
+        //     headers: {
+        //         'content-type': 'application/json',
+        //     },
+        //     body: JSON.stringify(AppointmentData)
+        // })
+        //     .then(res => res.json())
+        //     .then(result => {
+        //         console.log(result);
+                swal({
+                    title: "Good job!",
+                    text: `Appointment is successfully added`,
+                    icon: "success",
+                    button: "DONE",
+                });
+
+            // })
+            // .catch(err => console.error(err));
+                navigate('/dashboard/booking');
+    };
+    <Loading />
     return (
-        <dialog id="my_modal_3" className="modal max-h-fit  bg-[#1d344a98]">
-            <div className="modal-box bg-[#1d344a] w-3/4">
+        <dialog id="my_modal_3" className="modal max-h-fit">
+            <div className="modal-box w-3/4">
                 <form method="dialog">
-                    {/* if there is a button in form, it will close the modal */}
-                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-white">✕</button>
-                   
+                    {/* Close button that will close the modal */}
+                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-black">✕</button>
+                    <div className=" flex flex-col items-center justify-center">
+
+                        {/* Text input field for typing */}
+                        <input type="text" placeholder="Name" className="input input-bordered w-full max-w-xs mb-4" />
+
+                        {/* Date selector */}
+                        <input type="date" className="input input-bordered w-full max-w-xs mb-4" />
+
+                        {/* Time selector */}
+                        <input type="time" className="input input-bordered w-full max-w-xs mb-4" />
+
+                        {/* Phone number input */}
+                        <input type="tel" placeholder="Phone number" className="input input-bordered w-full max-w-xs mb-4" />
+
+                        {/* Address input */}
+                        <textarea placeholder="Address" className="input input-bordered w-full max-w-xs mb-4" rows="3"></textarea>
+
+                        {/* Submit button */}<button type="submit" className="btn bg-[#343a40] hover:bg-[#343a40] w-full max-w-xs text-white" onClick={handleAppointment}>Submit</button>
+                    </div>
+                    
                 </form>
-               <Link to="/Lex-ai">
-               <button className="btn btn-sm btn-circle btn-ghost absolute left-2 top-2 text-white"><img src="https://i.ibb.co/ydRtYXH/fullscreen.png" /></button>
-               </Link>
-                <div className="text-4xl font-['Inter'] font-semibold text-white p-5 text-center">
-                    Welcome to LEX-AI
-                </div>
-                <div className="border-solid overflow-hidden  flex flex-col justify-center gap-8 w-full items-center   rounded-[35px] bg-white p-10">
-
-
-                    <div className="w-full">
-                        <div className="chat chat-end">
-                            <div className="chat-image avatar">
-                                <div className="w-10 rounded-full">
-                                    <img src="https://i.ibb.co/kg3X7W8/photo-2023-05-15-00-28-43.jpg" />
-                                </div>
-                            </div>
-
-                            <div className="chat-bubble w-fit bg-black text-white">who are you?</div>
-
-                        </div>
-                        <div className="chat chat-start">
-                            <div className="chat-image avatar">
-                                <div className="w-10 rounded-full">
-                                    <img src="https://i.ibb.co/kg3X7W8/photo-2023-05-15-00-28-43.jpg" />
-                                </div>
-                            </div>
-
-                            <div className="chat-bubble bg-black text-white">Lex AI</div>
-
-                        </div>
-                    </div>
-                    <div className="flex gap-2">
-                        <div>
-                            <input type="search" className="rounded-2xl border-2 border-black"></input>
-                        </div>
-                        <div>
-                            <button>
-                                <img
-                                    src="https://i.ibb.co/5GP4ytS/Polygon-1-1.png"
-                                    id="PolygonRoot"
-                                    className="origin-top-left ] w-7 h-7"
-                                />
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </dialog>
+
+
     );
 };
 

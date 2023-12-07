@@ -33,7 +33,8 @@ import CaseStudyDetails from "../Page/CaseStudyDetails/CaseStudyDetails";
 
 import DownloadAppPage from "../Page/DownLoadApp/DownloadAppPage";
 import CaseStudy from "../Page/CaseStudy/CaseStudy";
-
+import ServiceDetails from "../Page/ServiceDetails/ServiceDetails";
+import PrivateRoute from "./PrivateRoutes";
  export const router = createBrowserRouter([
     {
       path: "/",
@@ -103,12 +104,16 @@ import CaseStudy from "../Page/CaseStudy/CaseStudy";
           path: "/casestudy-details/:id",
           element:<CaseStudyDetails></CaseStudyDetails>,
         },
+        {
+          path: "/servicedetails/:id",
+          element:<ServiceDetails></ServiceDetails>,
+        },
         
       ],
     },
     {
       path: "/dashboard",
-      element:<DashBoard></DashBoard>,
+      element:<PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
       children: [
         {
           path: "/dashboard",

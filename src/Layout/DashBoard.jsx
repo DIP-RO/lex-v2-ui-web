@@ -19,9 +19,9 @@ const DashBoard = () => {
     return (
         <div className="max-w-full sm:max-w-sm">
             <Navbar></Navbar>
-            <div className='flex lg:flex-wrap bg-gray-900 min-h-screen md:flex-row'>
-                <div className='bg-gray-900 w-1/4  border-r-2 border-black min-h-screen sm:hidden'>
-                    <h1 className="  flex justify-center h-10 items-center gap-3 w-full my-5 bg-[#DA1E37] hover:bg-[#DA1E37] border-0 border-spacing-0 rounded-l-3xl text-white rounded-r-none ml-5"> <img
+            <div className='flex lg:flex-wrap bg-[#212222] min-h-screen md:flex-row'>
+                <div className='bg-[#212222] w-1/4  border-r-2 border-black min-h-screen sm:hidden'>
+                    <h1 className="  flex justify-center h-10 items-center gap-3 w-full my-5 bg-[#b69d7485]   hover:bg-[#b69d74]-[#DA1E37] border-0 border-spacing-0 rounded-l-3xl text-white rounded-r-none ml-5"> <img
                         src="https://file.rendit.io/n/DMLiYpHTZnxxLEt4ZZbT.svg"
                         id="Icon"
                         className=" w-4 shrink-0"
@@ -30,22 +30,22 @@ const DashBoard = () => {
                     {/* {
                         isAdmin &&
                         <>
-                            <Link to="/dashboard/addLawyer"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                            <Link to="/dashboard/addLawyer"><button className="btn text-white w-full my-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                                 src="https://file.rendit.io/n/jrh2bdbn2ThJZbvydcGZ.svg"
                                 id="IconRoot"
                                 className="w-4"
                             /> Add Lawyer</button></Link>
-                            <Link to="/dashboard/addService"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                            <Link to="/dashboard/addService"><button className="btn text-white w-full my-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                                 src="https://file.rendit.io/n/KbbQnmyRu4YNEpCvYYec.svg"
                                 id="IconRoot"
                                 className="w-4"
                             /> Add Service</button></Link>
-                            <Link to="/dashboard/allUser"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                            <Link to="/dashboard/allUser"><button className="btn text-white w-full my-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                                 src="https://file.rendit.io/n/KbbQnmyRu4YNEpCvYYec.svg"
                                 id="IconRoot"
                                 className="w-4"
                             /> All User</button></Link>
-                            <Link to="/dashboard/allTestimonial"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                            <Link to="/dashboard/allTestimonial"><button className="btn text-white w-full my-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                                 src="https://file.rendit.io/n/KbbQnmyRu4YNEpCvYYec.svg"
                                 id="IconRoot"
                                 className="w-4"
@@ -56,23 +56,23 @@ const DashBoard = () => {
                     {
                         isUser &&
                         <>
-                            <Link to="/dashboard/review"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                            <Link to="/dashboard/review"><button className="btn text-white w-full my-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                                 src="https://file.rendit.io/n/zRWaGOKN4sY4Ueb6Qfaw.svg"
                                 id="IconRoot"
                                 className="w-4"
                             /> Reviews</button></Link>
-                            <Link to="/dashboard/bookmark"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                            <Link to="/dashboard/bookmark"><button className="btn text-white w-full my-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                                 src="https://file.rendit.io/n/KbbQnmyRu4YNEpCvYYec.svg"
                                 id="IconRoot"
                                 className="w-4"
                             /> Bookmarks</button></Link>
-                            <Link to="/dashboard/message"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                            <Link to="/dashboard/message"><button className="btn text-white w-full my-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                                 src="https://file.rendit.io/n/jrh2bdbn2ThJZbvydcGZ.svg"
                                 id="IconRoot"
                                 className="w-4"
                             /> Messages</button></Link>
 
-                            <Link to="/dashboard/booking"><button className="btn text-left text-white w-full mt-5 mb-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                            <Link to="/dashboard/booking"><button className="btn text-left text-white w-full mt-5 mb-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                                 src="https://file.rendit.io/n/0YB4KAOY7CqXouZklsN3.svg"
                                 id="IconRoot"
                                 className="w-4 "
@@ -83,7 +83,7 @@ const DashBoard = () => {
 
 
 
-                    <Link to="/dashboard/allAppointment"><button className="btn text-left text-white w-full mt-5 mb-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                    <Link to="/dashboard/allAppointment"><button className="btn text-left text-white w-full mt-5 mb-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                         src="https://file.rendit.io/n/0YB4KAOY7CqXouZklsN3.svg"
                         id="IconRoot"
                         className="w-4 "
@@ -92,7 +92,7 @@ const DashBoard = () => {
 
 
 
-                    <Link to="/dashboard/addBlog"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                    <Link to="/dashboard/addBlog"><button className="btn text-white w-full my-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                         src="https://file.rendit.io/n/KbbQnmyRu4YNEpCvYYec.svg"
                         id="IconRoot"
                         className="w-4"
@@ -102,18 +102,18 @@ const DashBoard = () => {
                     <div className="text-xs ml-10 font-['Raleway'] font-light tracking-[1] leading-[27px] uppercase text-[#999999] ">
                         Account
                     </div>
-                    {/* <Link to="/dashboard/profile"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                    {/* <Link to="/dashboard/profile"><button className="btn text-white w-full my-2 bg-[#212222] hover:bg-[#212222] border-0"><img
                         src="https://file.rendit.io/n/HmEYbnl7OL8xoIj41mEx.svg"
                         id="IconRoot"
                         className="w-4"
                     /> My Profile</button></Link> */}
-                    <button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0" onClick={logOut}><img
+                    <button className="btn text-white w-full my-2 bg-[#b69d7485]   hover:bg-[#b69d74] border-0" onClick={logOut}><img
                         src="https://file.rendit.io/n/OK1UKF1nQhsmTRonUJkv.svg"
                         id="IconRoot"
-                        className="w-4"
+                        className="w-4 "
                     /> Logout</button>
                 </div>
-                <div className='bg-gray-900 lg:w-3/4 sm:w-full min-h-screen md:w-3/4'>
+                <div className='bg-[#212222] lg:w-3/4 sm:w-full min-h-screen md:w-3/4'>
                     <Outlet></Outlet>
                 </div>
 

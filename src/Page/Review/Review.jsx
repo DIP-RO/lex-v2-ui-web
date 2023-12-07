@@ -38,7 +38,7 @@ const Review = () => {
     return (
         <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 lg:gap-6 lg:m-10">
             <button onClick={handleRefresh}>Refresh Reviews</button>
-            {reviews.map((review) => (
+            {reviews?.map((review) => (
                 <ReviewCard review={review} key={review._id} />
             ))}
         </div>

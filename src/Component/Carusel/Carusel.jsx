@@ -15,9 +15,9 @@ const Carusel = () => {
                     <div className=" w-full h-96  flex ">
                     
                     <div className="w-1/2 flex justify-center items-center">
-                        <div className="justify-center mt-16">
+                        <div className="flex flex-col items-center justify-center mt-16">
                             <h1 className="text-center text-4xl font-['Open_Sans'] font-bold text-white mt-10 ">{t("Home.Banner.second.title")}</h1>
-                            <h1 className="text-center text-3xl font-['Open_Sans'] font-semibold text-white mt-10 -ml-56"> {t("Home.Banner.second.subtitle")}</h1>
+                            <h1 className="text-center text-3xl font-['Open_Sans'] font-semibold text-white mt-10 "> {t("Home.Banner.second.subtitle")}</h1>
                             <Link to="/appointment">
                                 <button className="btn btn-neutral justify-center border border-white bg-[#b69d7485]   hover:bg-[#b69d74] w-[332px]  h-10  text-center rounded-[25px] mt-10">{t("Home.Banner.second.btn")}</button>
                             </Link>
@@ -38,9 +38,9 @@ const Carusel = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className=" w-full   flex gap-20">
                         <div className="w-1/2 flex justify-center items-center">
-                            <div className=" mt-16">
+                            <div className="flex flex-col items-center justify-center mt-16">
                                 <h1 className="text-center text-4xl font-['Open_Sans'] font-bold text-white mt-10 ">{t("Home.Banner.first.title")}</h1>
-                                <h1 className="text-center text-3xl font-['Open_Sans'] font-semibold text-white mt-10 -ml-56"> {t("Home.Banner.first.subtitle")}</h1>
+                                <h1 className="text-center text-3xl font-['Open_Sans'] font-semibold text-white mt-10 "> {t("Home.Banner.first.subtitle")}</h1>
                                 <Link to="/Lex-Ai">
                                     <button className="btn btn-neutral justify-center  bg-[#b69d7485]   hover:bg-[#b69d74] border border-white w-[332px]  h-10  text-center rounded-[25px] mt-10" >{t("Home.Banner.first.btn")}</button>
                                 </Link>

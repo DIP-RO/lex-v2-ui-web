@@ -15,6 +15,7 @@ import AvaiableLawyer from "../Appointment/AvaiableLawyer/AvaiableLawyer";
 import { RiArrowRightDoubleFill } from "react-icons/ri";
 import Location from "../../Component/Location/Location";
 import Modal from "../../Component/Modal/Modal";
+import PrivateRoute from "../../Route/PrivateRoutes";
 
 const LawyerDetails = () => {
     const { user } = useContext(AuthContext);
@@ -81,37 +82,7 @@ const LawyerDetails = () => {
     // };
 
 
-    const handleAppointment = () => {
-
-        // const AppointmentData = {
-        //     userName: user.displayName,
-        //     userEmail: user.email,
-        //     image: lawyer.image,
-        //     specialization: lawyer.specialization,
-        //     lawyerId: lawyer._id,
-        //     lawyerName: lawyer.name,
-        // }
-        // fetch('https://attractive-ruby-cow.cyclic.app/api/v1/appointments/appointments', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json',
-        //     },
-        //     body: JSON.stringify(AppointmentData)
-        // })
-        //     .then(res => res.json())
-        //     .then(result => {
-        //         console.log(result);
-                swal({
-                    title: "Good job!",
-                    text: `Appointment is successfully added`,
-                    icon: "success",
-                    button: "DONE",
-                });
-
-            // })
-            // .catch(err => console.error(err));
-
-    };
+    
 
     const handleBookmark = () => {
 
@@ -190,7 +161,7 @@ const LawyerDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <Modal></Modal>
+                    <PrivateRoute><Modal></Modal></PrivateRoute>
                 </div>
                 <div className="w-7/12 mx-5">
                     <div>

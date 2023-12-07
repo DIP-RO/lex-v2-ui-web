@@ -60,7 +60,7 @@ const Service = () => {
               </div>
               <div className="flex justify-center mt-5">
                 <button className="btn  lg:mt-2 md:mt-8 bg-transparent  text-white my-10">
-                  <Link to="/allService">Read MORE</Link>
+                  <Link to="/servicedetails/:id">Read MORE</Link>
                 </button>
               </div>
             </div>
