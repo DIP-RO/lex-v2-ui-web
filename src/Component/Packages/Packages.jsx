@@ -27,7 +27,7 @@ const Packages = () => {
   <Loading />;
   return (
     <div className="flex flex-col w-full ">
-      <h1 className="text-center text-5xl font-['Open_Sans'] font-bold text-black mt-10">
+      <h1 className="text-4xl font-bold text-center mb-4 mt-10">
         PACKAGES
       </h1>
       <div className="grid  lg:ml-10 lg:grid-cols-4  sm:grid-cols-1 md:grid-cols-3 md:gap-5 grid-cols-3 lg:gap-6 sm:gap-2 mt-10 lg:mx-10 p-2">

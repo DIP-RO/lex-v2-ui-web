@@ -31,7 +31,7 @@ const Testymony = () => {
     return (
         <div className="flex flex-col justify-center items-center my-20 sm:hidden">
             <div>
-                <h1 className="text-center text-4xl font-bold  uppercase text-black w-min">Feedback</h1>
+                <h1 className="text-4xl font-bold text-center mt-5">Feedback</h1>
             </div>
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-14 md:gap-6 mt-10 ">
                 {testymony.map((testy) => (

@@ -11,7 +11,7 @@ const MakeAppointment = () => {
           alt="Appointment Image"
         />
         <div className="w-full md:w-3/4 text-center md:text-left py-6">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Make an Appointment Today</h1>
+          <h1 className="text-4xl font-bold text-center mt-5 text-white">Make an Appointment Today</h1>
           <p className="py-4 md:text-xl text-white">
             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In
             deleniti eaque aut repudiandae et a id nisi.
