@@ -26,12 +26,12 @@ const Stats = () => {
   <Loading/>
   return (
     <div className=" mx-10 justify-center sm:hidden   ">
-      <div className="grid md:hidden lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-14 m-10 bg-[#f5f1f1] rounded-[50px] px-24">
+      <div className="grid md:hidden lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-14 m-10 bg-[#b69d74]  ] rounded-[50px] px-24">
         {stats.map((data, index) => (
             <div key={index} className="stat">
             <img src={data.icon} alt="" className="w-25 h-20" />
             <div className="text-lg font-sans font-semibold text-black">{data.title}</div>
-            <div className="stat-value text-orange-400">{data.value}</div>
+            <div className="stat-value text-white">{data.value}</div>
           </div>
         ))}
       </div>

@@ -3,7 +3,7 @@ import Loading from "../Loading/Loading";
 const Subscribe = () => {
     <Loading/>
     return (
-        <div className="sm:hidden border-solid border-[#e5e7eb] bg-[#212222] flex flex-col lg:flex-row md:flex-row justify-center gap-12 h-auto items-center border lg:w-3/4 py-10 my-10 mx-auto rounded">
+        <div className="sm:hidden border-solid border-[#e5e7eb] bg-[#212222] flex flex-col lg:flex-row md:flex-row justify-center gap-12 h-auto items-center border lg:w-3/4 py-10 my-10 mx-auto rounded" style={{ backgroundImage: 'url(https://i.ibb.co/MnvyBKL/contact-bg.png)' }}>
             <div className="flex flex-col items-start">
                 <div className="text-3xl font-['Segoe_UI'] font-bold leading-[36px] text-white">
                     Subscribe for E-mail NewsLetter

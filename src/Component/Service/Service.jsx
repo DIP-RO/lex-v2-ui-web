@@ -49,8 +49,8 @@ const Service = () => {
           {practiceAreas?.map((area) => (
             <div
               key={area.id}
-              className="bg-[#212222] rounded-lg shadow-md p-6 flex flex-col justify-between"
-            >
+              className="bg-[#212222] hover:-mt-5 hover:bg-[#b69d74] rounded-lg shadow-md p-6 flex flex-col justify-between"
+              style={{ backgroundImage: 'url(https://i.ibb.co/bFXh66d/7.png)' }}>
               <div className="flex justify-center mb-4">
                 <span className="text-4xl text-white">{area.icon}</span>
               </div>
@@ -59,7 +59,7 @@ const Service = () => {
                 <p className=" text-white">{area.description}</p>
               </div>
               <div className="flex justify-center mt-5">
-                <button className="btn  lg:mt-2 md:mt-8 bg-[#212222] hover:bg-[#212222] text-white my-10">
+                <button className="btn  lg:mt-2 md:mt-8 bg-transparent  text-white my-10">
                   <Link to="/allService">Read MORE</Link>
                 </button>
               </div>

@@ -46,7 +46,7 @@ const Navbar = () => {
     };
 <Loading/>
     return (
-        <div className="navbar sticky z-10 top-0 bg-[#212222]  sm:hidden  flex justify-between border-b-2 border-white ">
+        <div className="navbar sticky z-10 top-0 bg-[#212222]  sm:hidden  flex justify-between border-b-2 border-[#b69d74] ">
             <div className="navbar-start  ">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -74,12 +74,13 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex cursor-pointer">
                 <ul className="menu menu-horizontal p-0">
-                    <li className='text-white mt-5 normal-case'><Link to="/">{t("Home.Navbar.home")}</Link></li>
-                    <li className='text-white mt-5'><Link to="/appointment">{t("Home.Navbar.appointment")}</Link></li>
-                    <li className='text-white mt-5 '><Link to="/blog">{t("Home.Navbar.blog")}</Link></li>
-                    <li className='text-white mt-5 '><Link to="/about">{t("Home.Navbar.about")}</Link></li>
-                    <li className='text-white mt-5 '><Link to="/contact">{t("Home.Navbar.contact")}</Link></li>
-                    <li className='text-white mt-5 mr-14'><Link to="/app">App</Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74] normal-case'><Link to="/">{t("Home.Navbar.home")}</Link></li>
+                    <li className='text-white hover:text-[#b69d74] mt-5'><Link to="/appointment">{t("Home.Navbar.appointment")}</Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/blog">{t("Home.Navbar.blog")}</Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/about">{t("Home.Navbar.about")}</Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/contact">{t("Home.Navbar.contact")}</Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74] '><Link to="/app">App</Link></li>
+                    <li className='text-white mt-5 hover:text-[#b69d74] mr-14'><Link to="/casestudy">Case Studies</Link></li>
                     <li>
                         <select className="bg-white mt-2 h-12 hover:bg-white rounded-full" onChange={onChangeLang}>
                             <option value="en" className="lang">
@@ -122,7 +123,7 @@ const Navbar = () => {
                                 </div>
                             </Link>
                         </li>
-                        : <li className='text-white mt-5'><Link to="/login">Login</Link></li>
+                        : <li className='text-white mt-5 hover:text-[#b69d74]'><Link to="/login">Login</Link></li>
 
                     }
                 </ul>

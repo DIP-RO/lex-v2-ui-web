@@ -27,7 +27,7 @@ const DashBoard = () => {
                         className=" w-4 shrink-0"
                     />DashBoard</h1>
 
-                    {
+                    {/* {
                         isAdmin &&
                         <>
                             <Link to="/dashboard/addLawyer"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
@@ -96,17 +96,17 @@ const DashBoard = () => {
                         src="https://file.rendit.io/n/KbbQnmyRu4YNEpCvYYec.svg"
                         id="IconRoot"
                         className="w-4"
-                    /> Add Blog</button></Link>
+                    /> Add Blog</button></Link> */}
 
 
                     <div className="text-xs ml-10 font-['Raleway'] font-light tracking-[1] leading-[27px] uppercase text-[#999999] ">
                         Account
                     </div>
-                    <Link to="/dashboard/profile"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
+                    {/* <Link to="/dashboard/profile"><button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0"><img
                         src="https://file.rendit.io/n/HmEYbnl7OL8xoIj41mEx.svg"
                         id="IconRoot"
                         className="w-4"
-                    /> My Profile</button></Link>
+                    /> My Profile</button></Link> */}
                     <button className="btn text-white w-full my-2 bg-gray-900 hover:bg-gray-900 border-0" onClick={logOut}><img
                         src="https://file.rendit.io/n/OK1UKF1nQhsmTRonUJkv.svg"
                         id="IconRoot"
@@ -119,7 +119,7 @@ const DashBoard = () => {
 
             </div>
             <ButtomNavigation></ButtomNavigation>
-            <Footer></Footer>
+           
         </div>
     );
 };

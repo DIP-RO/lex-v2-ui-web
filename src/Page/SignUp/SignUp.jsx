@@ -57,7 +57,7 @@ const SignUp = () => {
     <Loading/>
     return (
         <div className="flex justify-center my-5 ">
-            <div className="card w-96  bg-[#1d344a] shadow-2xl ">
+            <div className="card w-96  bg-[#212222] shadow-2xl ">
                 <div className="card-body items-center text-center">
                     <h1 className="text-2xl font-bold text-white">SIGNUP</h1>
                     <form onSubmit={handleSubmit}>

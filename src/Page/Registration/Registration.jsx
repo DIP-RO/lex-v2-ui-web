@@ -64,7 +64,7 @@ const Registration = () => {
 
     return (
         <div className="flex justify-center  ">
-            <div className="card w-96  bg-gray-900 shadow-2xl my-10">
+            <div className="card w-96  bg-[#212222] shadow-2xl my-10">
                 <div className="card-body items-center text-center">
                     <form
                         className="mt-6 text-center pb-6"

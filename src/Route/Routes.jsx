@@ -30,8 +30,10 @@ import AddLawyer from "../Page/DashboardHome/AddLawyer";
 import AllUser from "../Page/DashboardHome/AllUser";
 import Service from "../Component/Service/Service";
 import AllServices from "../Component/Service/AllServices";
+import CaseStudyDetails from "../Page/CaseStudyDetails/CaseStudyDetails";
 
 import DownloadAppPage from "../Page/DownLoadApp/DownloadAppPage";
+import CaseStudy from "../Page/CaseStudy/CaseStudy";
 
  export const router = createBrowserRouter([
     {
@@ -98,7 +100,14 @@ import DownloadAppPage from "../Page/DownLoadApp/DownloadAppPage";
           path: "/blog-details/:id",
           element:<BlogDetails></BlogDetails>,
         },
-       
+        {
+          path: "/casestudy",
+          element:<CaseStudy></CaseStudy>,
+        },
+        {
+          path: "/casestudy-details/:id",
+          element:<CaseStudyDetails></CaseStudyDetails>,
+        },
         
       ],
     },

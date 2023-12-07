@@ -33,7 +33,7 @@ const Packages = () => {
       <div className="grid  lg:ml-10 lg:grid-cols-4  sm:grid-cols-1 md:grid-cols-3 md:gap-5 grid-cols-3 lg:gap-6 sm:gap-2 mt-10 lg:mx-10 p-2">
         {packages.map((data) => (
           <Link key={data.id} to="coming-soon">
-            <div className="card w-72 bg-[#212222]  shadow-xl">
+            <div className="card w-72 bg-[#212222] hover:bg-[#b69d74] shadow-xl" style={{ backgroundImage: 'url(https://i.ibb.co/bFXh66d/7.png)' }}>
               <figure className=" pt-10">
                 <img
                   src={data.images}
@@ -45,7 +45,7 @@ const Packages = () => {
                 <h1 className="card-title text-white">{data.title}</h1>
                 <p className="text-white">If a dog chews shoes whose shoes does he choose?</p>
                 <div className="card-actions">
-                  <button className="btn bg-[#191818]  lg:mt-2 md:mt-8 hover:bg-[#191818]  text-white my-10">
+                  <button className="btn bg-transparent  hover:bg-transparent  lg:mt-2 md:mt-8   text-white my-5">
                     <Link to="/coming-soon">View Details</Link>
                   </button>
                 </div>

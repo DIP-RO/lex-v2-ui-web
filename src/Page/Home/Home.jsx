@@ -14,10 +14,11 @@ import Question from "../../Component/Question/Question";
 import LexSearch from "./LexSearch/LexSearch";
 import Introducing from "./Introducing/Introducing";
 import Loading from "../../Component/Loading/Loading";
+import Case from "../../Component/Case/Case";
 
 
 const Home = () => {
-    <Loading/>
+    <Loading />
     return (
         <div className="sm:max-w-sm">
             <LexSearch></LexSearch>
@@ -29,13 +30,19 @@ const Home = () => {
             <Service></Service>
             <Stats></Stats>
             <Packages></Packages>
+            <div className=" mt-10 flex flex-col justify-center sm:mt-3  sm:w-3/4 sm:p-5 h-20 shrink-0 items-center rounded-[35px]">
+                <div className="text-6xl lg:text-4xl md:text-3xl sm:text-lg  font-['Poppins'] font-semibold leading-[32px] text-black">
+                Check Out Our Popular Case Studies.
+                </div>
+            </div>
+            <Case></Case>
             <Lawyer></Lawyer>
             <MakeAppointment></MakeAppointment>
             <Testymony></Testymony>
             <Facility></Facility>
             <Question></Question>
             <Subscribe></Subscribe>
-            
+
         </div>
     );
 };
