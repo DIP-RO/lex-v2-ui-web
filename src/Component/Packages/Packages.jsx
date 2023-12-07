@@ -24,28 +24,28 @@ const Packages = () => {
       images: "https://i.ibb.co/TBR75Hw/image.png",
     },
   ];
-  <Loading />;
+
   return (
-    <div className="flex flex-col w-full ">
+    <div className="flex flex-col w-full justify-center items-center px-4 lg:px-0">
       <h1 className="text-4xl font-bold text-center mb-4 mt-10">
         PACKAGES
       </h1>
-      <div className="grid  lg:ml-10 lg:grid-cols-4  sm:grid-cols-1 md:grid-cols-3 md:gap-5 grid-cols-3 lg:gap-6 sm:gap-2 mt-10 lg:mx-10 p-2">
+      <div className="mt-5 grid grid-cols-1 lg:grid-cols-4 gap-5 w-full max-w-7xl">
         {packages.map((data) => (
           <Link key={data.id} to="coming-soon">
-            <div className="card w-72 bg-[#212222] hover:bg-[#b69d74] shadow-xl" style={{ backgroundImage: 'url(https://i.ibb.co/bFXh66d/7.png)' }}>
-              <figure className=" pt-10">
+            <div className="card bg-[#212222] hover:bg-[#b69d74] shadow-xl">
+              <figure className="pt-10">
                 <img
                   src={data.images}
                   alt={data.title}
-                  className="rounded-xl"
+                  className="rounded-xl "
                 />
               </figure>
-              <div className="card-body items-center text-center">
+              <div className="card-body items-center text-center p-4 lg:p-6">
                 <h1 className="card-title text-white">{data.title}</h1>
                 <p className="text-white">If a dog chews shoes whose shoes does he choose?</p>
                 <div className="card-actions">
-                  <button className="btn bg-transparent  hover:bg-transparent  lg:mt-2 md:mt-8   text-white my-5">
+                  <button className="btn bg-transparent hover:bg-transparent text-white my-5">
                     <Link to="/coming-soon">View Details</Link>
                   </button>
                 </div>

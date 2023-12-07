@@ -73,7 +73,7 @@ const OurTeam = () => {
     return (
         <div className="flex justify-center bg-[#f5f1f1] items-center flex-col my-10">
         <h1 className="text-black bg-[#f5f1f1] text-3xl font-bold  p-3 rounded-2xl"> Lex.Ai Team</h1>
-        <div className="mt-5 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
+        <div className="mt-5 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-10">
           {ourteam.map((team) => (
             <div className="card" key={team.id}>
               <TeamMemberCard team={team} />

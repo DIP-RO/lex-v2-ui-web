@@ -112,15 +112,15 @@ const LexAi = () => {
 
     return (
         <div className="flex-1 justify-center items-center">
-            <div className="flex bg-[#212222] min-h-screen">
+            <div className="flex bg-[#f5f1f1] min-h-screen">
                 <div className="w-1/5 p-5 order-3 border-l border-[#04364A]">
-                    <h2 className="text-2xl font-bold text-white mb-4">Conversations</h2>
+                    <h2 className="text-2xl font-bold  mb-4">Conversations</h2>
                     <ul className="overflow-y-auto max-h-screen">
                         <li
                             className="text-white cursor-pointer hover:text-gray-300 mb-2"
                             onClick={() => handleConversationClick({ title: 'New Chat', messages: [] })}
                         >
-                            <button className="bg-blue-900 text-white p-2 rounded-md">
+                            <button className="bg-[#343a40] transition duration-300 ease-in-out transform hover:scale-105 hover:bg-[#b69d74] text-white p-2 rounded-md">
                                 <span className="text-xl mr-1">+</span> New Chat
                             </button>
                         </li>
@@ -136,13 +136,13 @@ const LexAi = () => {
                     </ul>
                 </div>
                 <div className="flex-1 p-5 order-2">
-                    <div className="text-4xl font-poppins font-semibold text-white text-center">
+                    <div className="text-4xl font-bold text-center mb-5">
                         Welcome to <span className="text-blue-500">Lex.Ai</span>
                     </div>
                     <div className="flex justify-center items-center">
-                        <div className="border-solid overflow-hidden flex flex-col justify-end gap-8 items-center sm:rounded-t-[50px] lg:rounded-[50px] p-5 bg-[#0b1420] w-full sm:h-screen sm:w-full">
-                            <div className="w-full bg-[#212222] min-h-[200px] h-auto sm:bg-[#04364A] rounded-xl relative overflow-hidden shadow-lg">
-                                <div className="absolute inset-0 bg-[#0b1420] backdrop-blur-lg opacity-75 rounded-xl"></div>
+                        <div className="border-solid overflow-hidden flex flex-col justify-end gap-8 items-center sm:rounded-t-[50px] lg:rounded-[50px] p-5 bg-[#212222] w-full sm:h-screen sm:w-full">
+                            <div className="mt-5 w-full bg-[#f5f1f1] min-h-[380px] h-auto sm:bg-[#04364A] rounded-xl relative overflow-hidden shadow-lg">
+                                <div className="absolute inset-0  backdrop-blur-lg opacity-75 rounded-xl"></div>
                                 <div className="chat-container p-4 flex flex-col overflow-y-auto" ref={chatContainerRef}>
                                     {userMessages.map((message, index) => (
                                         <div
@@ -191,7 +191,7 @@ const LexAi = () => {
                                 </div>
                                 <div className="relative flex-1">
                                     <textarea
-                                        className="textarea textarea-bordered textarea-sm lg:w-96 rounded-xl bg-[#04364A] text-white backdrop-blur-md p-2 pr-10"
+                                        className="textarea textarea-bordered textarea-sm lg:w-96 rounded-xl   backdrop-blur-md p-2 pr-10"
                                         placeholder="Type something here"
                                         value={val}
                                         onChange={(e) => setVal(e.target.value)}
@@ -202,7 +202,7 @@ const LexAi = () => {
                                     ></textarea>
                                     <button
                                         onClick={handleAi}
-                                        className="absolute inset-y-0 right-0 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl py-2 px-4"
+                                        className="mt-3 h-14 absolute inset-y-0 right-0 bg-[#b69d74]  transition duration-300 ease-in-out transform hover:scale-105 hover:bg-[#343a40] text-white font-semibold rounded-xl py-2 px-4"
                                     >
                                         <FiArrowRight />
                                     </button>

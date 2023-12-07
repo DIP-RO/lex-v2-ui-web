@@ -27,17 +27,17 @@ const LawDetails = () => {
     return (
         <div className="bg-[#212222]">
             <div className="w-full bg-[#212222]">
-                <div className="card-body">
-                    <h2 className="card-title text-white ">{data.Problem}</h2>
-                    <p className="text-white"><span className="text-xl font-semibold">VICTIM:</span> {data.Victims}</p>
-                    <p className="text-white font-bold text-3xl">QUESTION: {data.Query}</p>
-                    <p className="text-white"><span className="text-xl font-semibold">SUGGESTION:</span> {data.Suggestions}</p>
-                    <p className="text-white"><span className="text-xl font-semibold">LAW: </span>{data.Law}</p>
+                <div className="card-body mx-20 py-10">
+                  
+                   
+                    <p className="text-white  font-medium text-3xl mb-10">QUESTION: {data.Query}</p>
+                    <p className="text-white  mb-10 "><span className="underline font-semibold">SUGGESTION:</span> {data.Suggestions}</p>
+                    <p className="text-white "><span className="underline  font-semibold">LAW: </span>{data.Law}</p>
                 </div>
             </div>
             {related.map((item) => (
                 <Link to={`/law-details/${item._id}`} key={item._id}>
-                    <div className="w-full ">
+                    <div className="mx-20 border   ">
                         <div className="card-body">
                             <h2 className="card-title text-white">{item.Query}</h2>
                         </div>

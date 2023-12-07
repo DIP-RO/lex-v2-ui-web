@@ -11,7 +11,7 @@ const Advisor = () => {
       {
         id: 2,
         name: "Prof. Dr. Syed Akhter Hossain",
-        designation: "Dean and Professor of CSE",
+        designation: "Dean & Professor of CSE",
         department: "Department of Computer Science and Engineering(FSIT)",
         role: "Advisor",
         image: "https://i.ibb.co/yYg27GM/img-3.jpg",
