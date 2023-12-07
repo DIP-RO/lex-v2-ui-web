@@ -1,4 +1,6 @@
 import Loading from '../../Component/Loading/Loading';
+import Advisor from './Advisors/Advisor';
+import Consultant from './Consultant/Consultant';
 
 import Others from './others';
 import OurTeam from './OurTeam/OurTeam';
@@ -10,13 +12,14 @@ const About = () => {
              
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">About Us</h1>
+                        <h1 className="mb-5 text-5xl font-bold"></h1>
                     </div>
                 </div>
             </div>
             
-
+<Advisor></Advisor>
             <OurTeam></OurTeam>
+            <Consultant></Consultant>
             <Others />
         </div>
     );

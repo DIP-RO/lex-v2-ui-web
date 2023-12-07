@@ -6,11 +6,11 @@ const Facility = () => {
     return (
         <div
             id="DivmyRoot"
-            className=" flex flex-col lg:gap-24 w-full h-[478px]  items-center lg:px-[206px] py-12 sm:hidden"
+            className=" flex flex-col lg:gap-16 w-full h-[478px]  items-center lg:px-[206px] py-12 sm:hidden"
             style={{ backgroundImage: 'url(https://i.ibb.co/jG84Kfp/contact-bg.jpg)' }}>
             <div
                 id="HeadingOurFacilites"
-                className="text-center text-4xl font-['Segoe_UI'] font-bold leading-[40px] uppercase text-white"
+                className="text-4xl font-bold text-center mt-5 text-white"
             >
                 Our Facilites
             </div>

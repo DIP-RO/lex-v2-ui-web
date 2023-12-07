@@ -31,8 +31,8 @@ const Home = () => {
             <Stats></Stats>
             <Packages></Packages>
             <div className=" mt-10 flex flex-col justify-center sm:mt-3  sm:w-3/4 sm:p-5 h-20 shrink-0 items-center rounded-[35px]">
-                <div className="text-6xl lg:text-4xl md:text-3xl sm:text-lg  font-['Poppins'] font-semibold leading-[32px] text-black">
-                Check Out Our Popular Case Studies.
+                <div className="text-4xl font-bold text-center mt-5">
+                 Our Popular Case Studies.
                 </div>
             </div>
             <Case></Case>

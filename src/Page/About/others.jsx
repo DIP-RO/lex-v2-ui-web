@@ -15,8 +15,8 @@ const Others = () => {
   return (
     <div className="bg-[#f5f1f1] py-10">
       <div className=" ">
-        <h2 className="text-4xl text-center text-black font-bold">
-          About us
+        <h2 className="text-4xl font-bold text-center">
+          Location Details
         </h2>
       </div>
       <div className="flex justify-around items-center  md:flex-row sm:flex-col-reverse text-black py-10">

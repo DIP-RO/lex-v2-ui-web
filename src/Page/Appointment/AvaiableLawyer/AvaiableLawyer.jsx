@@ -17,11 +17,11 @@ const AvaiableLawyer = () => {
     }, []);
     <Loading />
     return (
-        <div className="h-fit grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 lg:gap-8 md:gap-5 mt-5 sm:max-w-sm sm:gap-4 md:min-h-fit">
+        <div className="h-fit grid lg:grid-cols-3 md:grid-cols-2 grid-cols-2 lg:gap-8 md:gap-5  sm:max-w-sm sm:gap-4 md:min-h-fit">
             {lawyers.map((lawyer) => (
                 <div key={lawyer._id}>
                     <Link to={`/lawyardetails/${lawyer._id}`}>
-                        <div className="w-[300px] bg-base-100 shadow-xl m-20">
+                        <div className="w-[300px]  shadow-xl m-20">
                             <figure ><img src="https://faculty.daffodilvarsity.edu.bd/images/teacher/6ee58b6017ad9f5865715be5bfc5711e.JPG" alt="Shoes" className="w-[300px] h-[350px]" /></figure>
                             <div className="flex flex-col items-center justify-center  z-10 ">
                                 <div className="bg-[#343a40]  rounded-3xl -mt-7 flex gap-4 p-5 items-center justify-center">
