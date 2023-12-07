@@ -21,10 +21,10 @@ function MyComponent() {
             <div className=" flex gap-10">
                 <div className='border-8 border-[#b69d74] border-spacing-56 w-1/2 m-10'>
                     <div className='m-10 -mr-20'>
-                        <img src="https://i.ibb.co/9Y7PhPw/5.jpg" className="  w-full h-full" />
+                        <img src="https://i.ibb.co/9Y7PhPw/5.jpg" className="  w-full h-96" />
                     </div>
                 </div>
-                <div className='w-1/2 mx-5 my-14'>
+                <div className='w-1/2 mx-5 my-14 '>
                     <h1 className='text-4xl font-bold  mb-8'>We Provide Professional Attorneys to Assist You</h1>
                     <p className=' text-xl '>We are qualified for the success of our client & as a professional law firm. So these professional attorneys are still here at your side with kindness, integrity, and loyalty to help with the worst moments of your life.</p>
                     <div className='mt-5 grid grid-cols-2 gap-10'>
