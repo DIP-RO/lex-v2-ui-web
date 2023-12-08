@@ -12,7 +12,7 @@ const BookMark = () => {
         <div >
             <Link to="/lawyardetails/6542a2ff8d56437aa4843152" >
             <div className="w-[300px]  shadow-xl m-20 bg-white">
-                <figure ><img src="https://faculty.daffodilvarsity.edu.bd/images/teacher/6ee58b6017ad9f5865715be5bfc5711e.JPG" alt="Shoes" className="w-[300px] h-[350px]" /></figure>
+                <figure ><img src="https://i.ibb.co/z5rDH3X/img-6.jpg" alt="Shoes" className="w-[300px] h-[350px]" /></figure>
                 <div className="flex flex-col items-center justify-center  z-10 ">
                     <div className="bg-[#343a40]  rounded-3xl -mt-7 flex gap-4 p-5 items-center justify-center">
 

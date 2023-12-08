@@ -135,7 +135,7 @@ const LawyerDetails = () => {
                     <div className="hero-content  flex-col  w-full h-fit shadow-lg shadow-stone-950">
                         <div className="flex flex-col justify-center items-center">
                             <div className='  '>
-                                <img src='https://faculty.daffodilvarsity.edu.bd/images/teacher/6ee58b6017ad9f5865715be5bfc5711e.JPG' alt="" className="h-60 w-60   shadow-2xl" />
+                                <img src={lawyer.image} alt="" className="h-60 w-60   shadow-2xl" />
                             </div>
                             <div className="bg-[#343a40] rounded-lg -mt-7 flex gap-2 p-5">
 

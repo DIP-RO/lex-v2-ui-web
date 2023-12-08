@@ -22,7 +22,7 @@ const AvaiableLawyer = () => {
                 <div key={lawyer._id}>
                     <Link to={`/lawyardetails/${lawyer._id}`}>
                         <div className="w-[300px]  shadow-xl m-20">
-                            <figure ><img src="https://faculty.daffodilvarsity.edu.bd/images/teacher/6ee58b6017ad9f5865715be5bfc5711e.JPG" alt="Shoes" className="w-[300px] h-[350px]" /></figure>
+                            <figure ><img src={lawyer.image} alt="Shoes" className="w-[300px] h-[350px]" /></figure>
                             <div className="flex flex-col items-center justify-center  z-10 ">
                                 <div className="bg-[#343a40]  rounded-3xl -mt-7 flex gap-4 p-5 items-center justify-center">
 
@@ -32,9 +32,9 @@ const AvaiableLawyer = () => {
                                     <FaLinkedin className=" text-white" />
                                 </div>
                                 <h2 className="card-title">
-                                Dr. S.M. Saiful Hoque
+                                {lawyer.name}
                                 </h2>
-                                <p className=" my-3">Family Consultant</p>
+                                <p className=" my-3">{lawyer.specialization}</p>
 
                             </div>
                         </div>

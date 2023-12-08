@@ -9,19 +9,19 @@ const FindBlog = () => {
           id: 1,
           name: 'stella larson',
           message: 'Sample text. Click to select the text box. Click again or double click to start editing the text.',
-          image: "https://i.ibb.co/b7z8Z3t/image.png",
+          image: "https://i.ibb.co/NV7swZc/2.jpg",
         },
         {
           id: 2,
           name: 'Olga jhonso',
           message: 'Sample text. Click to select the text box. Click again or double click to start editing the text.',
-          image: "https://i.ibb.co/19myfyW/image.png",
+          image: "https://i.ibb.co/Jv4VL7t/1.jpg",
         },
         {
           id: 3,
           name: 'Paul Smith',
           message: 'Sample text. Click to select the text box. Click again or double click to start editing the text.',
-          image: "https://i.ibb.co/BZtx9Gf/image.png",
+          image: "https://i.ibb.co/wKRbSx4/3.jpg",
         },
       ]
 
@@ -34,7 +34,7 @@ const FindBlog = () => {
                  <div className="max-w-md bg-white rounded overflow-hidden shadow-lg">
                      <img
                          className="w-full h-64 object-cover"
-                         src="https://i.ibb.co/Hqn87ND/3.jpg"
+                         src={blog.image}
                          alt="Card Image"
                      />
                      <div className="flex justify-center">

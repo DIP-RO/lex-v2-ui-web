@@ -21,7 +21,7 @@ const BlogDetails = () => {
             <div className="flex justify-center gap-5 mt-5">
             <div className="w-6/12">
                 <div className="  bg-base-100 shadow-xl flex flex-col gap-5">
-                    <figure><img src="https://i.ibb.co/Hqn87ND/3.jpg" className="w-full max-h-screen" alt="Album" /></figure>
+                    <figure><img src="https://i.ibb.co/NV7swZc/2.jpg" className="w-full max-h-screen" alt="Album" /></figure>
                     <div className=" px-4">
                         <h2 className=" text-2xl font-bold mt-5 ">One problem of criminal activities is accounting for the proceeds without raising the suspicion of law enforcement agencies</h2>
 
@@ -47,7 +47,7 @@ const BlogDetails = () => {
                 <div>
                     <h2 className=" text-2xl font-bold mt-10">Recent Blogs</h2>
                     <div className=" bg-base-100 shadow-xl flex gap-5 mt-5">
-                        <figure><img src="https://i.ibb.co/Hqn87ND/3.jpg" alt="Movie"  className="h-40 w-40"/></figure>
+                        <figure><img src="https://i.ibb.co/wKRbSx4/3.jpg" alt="Movie"  className="h-40 w-40"/></figure>
                         <div className="">
                             <h2 className=" text-lg ">There are many variations of passages.</h2>
                             <div className="flex gap-5 mt-5">
@@ -62,7 +62,7 @@ const BlogDetails = () => {
                         </div>
                     </div>
                     <div className=" bg-base-100 shadow-xl flex gap-5 mt-5">
-                        <figure><img src="https://i.ibb.co/Hqn87ND/3.jpg" alt="Movie"  className="h-40 w-40"/></figure>
+                        <figure><img src="https://i.ibb.co/Zh08zxt/4.jpg" alt="Movie"  className="h-40 w-40"/></figure>
                         <div className="">
                             <h2 className=" text-lg ">There are many variations of passages.</h2>
                             <div className="flex gap-5 mt-5">
@@ -77,7 +77,7 @@ const BlogDetails = () => {
                         </div>
                     </div>
                     <div className=" bg-base-100 shadow-xl flex gap-5 mt-5">
-                        <figure><img src="https://i.ibb.co/Hqn87ND/3.jpg" alt="Movie"  className="h-40 w-40"/></figure>
+                        <figure><img src="https://i.ibb.co/t8vCgXr/5.jpg" alt="Movie"  className="h-40 w-40"/></figure>
                         <div className="">
                             <h2 className=" text-lg ">There are many variations of passages.</h2>
                             <div className="flex gap-5 mt-5">
